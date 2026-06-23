@@ -1,10 +1,8 @@
 public class FactoryMethod {
-    // ===== Product Interface =====
     interface Document {
         void open();
     }
 
-    // ===== Concrete Products =====
     static class WordDocument implements Document {
         public void open() {
             System.out.println("Opening Word Document");
@@ -23,7 +21,6 @@ public class FactoryMethod {
         }
     }
 
-    // ===== Factory =====
     static abstract class DocumentFactory {
         public abstract Document createDocument();
     }
@@ -46,7 +43,6 @@ public class FactoryMethod {
         }
     }
 
-    // ===== Main Method (Test) =====
     public static void main(String[] args) {
 
         DocumentFactory wordFactory = new WordFactory();

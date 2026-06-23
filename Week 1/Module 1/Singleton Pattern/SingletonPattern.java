@@ -1,16 +1,10 @@
 public class SingletonPattern {
-    // ===== Singleton Class =====
     static class Logger {
-
-        // Step 1: static instance
         private static Logger instance;
-
-        // Step 2: private constructor
         private Logger() {
             System.out.println("Logger instance created");
         }
 
-        // Step 3: global access point
         public static Logger getInstance() {
             if (instance == null) {
                 instance = new Logger();
@@ -18,13 +12,11 @@ public class SingletonPattern {
             return instance;
         }
 
-        // Sample method
         public void log(String message) {
             System.out.println("LOG: " + message);
         }
     }
 
-    // ===== Test Class =====
     public static void main(String[] args) {
 
         Logger logger1 = Logger.getInstance();
